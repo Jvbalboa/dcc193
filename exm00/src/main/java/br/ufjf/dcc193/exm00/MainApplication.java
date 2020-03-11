@@ -11,14 +11,10 @@ public class MainApplication {
 		ConfigurableApplicationContext contexto = SpringApplication.run(MainApplication.class, args);
 		System.out.println("Hello World!");
 
-		Heroi heroi = contexto.getBean(Heroi.class);
-
 		final Missao m1 = contexto.getBean(Missao.class);
-		m1.setHeroi(heroi);
 		m1.Resolver();
 
 		final Missao m2 = contexto.getBean(Missao.class);
-		m2.setHeroi(heroi);
 		m2.Resolver();
 	}
 
